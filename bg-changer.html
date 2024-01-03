@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background changer</title>
+</head>
+<style>
+    button{
+        height: 50px;
+        width: 50px;
+    }
+    #grey{
+        background: gray;
+    }
+    #yellow{
+        background: yellow;
+    }
+    #blue{
+        background: blue;
+    }
+    #orange{
+        background: orange;
+    }
+    #pink{
+        background: pink;
+    }
+    #purple{
+        background: purple;
+    }
+    #white{
+        background: rgba(240, 229, 240, 0.777);
+    }
+</style>
+<body>
+<button class="btn" id="grey"></button>
+<button class="btn" id="orange"></button>
+<button class="btn" id="blue"></button>
+<button class="btn" id="yellow"></button>
+<button class="btn" id="pink"></button>
+<button class="btn" id="purple"></button>
+<button class="btn" id="white"></button>
+
+
+</body>
+    <script>
+        const btn =document.querySelectorAll('button')
+        const body =document.querySelector('body')
+
+btn.forEach((button)=>{
+// console.log(button);
+button.addEventListener('click',(e)=>{
+    // console.log(e);
+    console.log(e.target);
+    if(e.target.id==='yellow'){
+        body.style.background=e.target.id
+    }
+    if(e.target.id==='grey'){
+        body.style.background=e.target.id
+    }
+    if(e.target.id==='blue'){
+        body.style.background=e.target.id
+    }
+    if(e.target.id==='orange'){
+        body.style.background=e.target.id
+    }
+    if(e.target.id==='pink'){
+        body.style.background=e.target.id
+    }
+    if(e.target.id==='purple'){
+        body.style.background=e.target.id
+    }
+    if(e.target.id==='white'){
+        body.style.background=e.target.id
+    }
+})
+})
+    
+
+    </script>
+</html>
