@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js event </title>
+    <style>
+       p{
+            height: 30px;
+            width: 30px;
+            margin: 5px;
+        }
+        #red{
+            
+            background: red;
+        }
+        #red{
+            
+            background: red;
+        }
+        #blue{
+            
+            background: blue;
+        }
+        #orange{
+            
+            background: orange;
+        }
+        #pink{
+            
+            background: pink;
+        }
+        #purple{
+            
+            background: purple;
+        }
+        #black{
+            
+            background: black;
+        }
+        
+    </style>
+</head>
+<body style="background: #414141; color: aliceblue;">
+    <div id="pra">
+      <ul id="para">
+       <li><p id="red"></p></li>
+       <li><p id="blue"></p></li>
+       <li><p id="orange"></p></li>
+       <li><p id="pink"></p></li>
+       <li><p id="black"></p></li>
+       <li><p id="purple"></p></li>
+      <li><a href="https://google.com" id="google">google</a></li>
+      </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('blue').onclick=function(){
+    //     alert('blue click')
+    // }
+
+    // focus in the topics 
+    // type , timestamp,defaultPrevented
+    // target.toElement,srcElement,currentTarget
+    // clientX,clientY,screenX,screenX,screenY
+    // altkey,ctlKey,shiftKey,keyCode
+
+    // document.getElementById('pra').addEventListener('click',function(e){
+    //   console.log('clicked inside ul');
+    // })
+    // document.getElementById('red').addEventListener('click',function(e){
+    //   console.log('click red');
+    //   e.stopPropagation()
+    // })
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log('google clicked');
+    // })
+
+    document.querySelector('#para').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        
+        if(e.target.tagName === 'P'){
+            console.log(e.target.id);
+
+     
+            let removeit =e.target.parentNode
+            removeit.remove()
+        }
+    })
+
+</script>
+</html>
